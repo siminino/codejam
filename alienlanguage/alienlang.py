@@ -40,7 +40,7 @@ def times_in_words(words, test_text, letter_possible, L):
             cont += 1
         else:
             for letter_index in range(L):
-                if (test_words[letter_index] in letter_possible[letter_index]) or (test_words[letter_index] == test_text[letter_index]):
+                if (test_words[letter_index] in letter_possible[letter_index]):
                     is_equal = True
                 else:
                     is_equal = False
