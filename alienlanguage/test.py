@@ -1,5 +1,5 @@
 import unittest
-from alienlang import alien_trans, list_letter
+from alienlang import alien_trans, list_letter, times_in_words
 
 class TestAlienLanguage(unittest.TestCase):
 
@@ -19,5 +19,17 @@ class TestListLetter(unittest.TestCase):
 
     def test_deve_retornar_acsd_fdseasdds_abc_d_adsaa_asd_poqwea_asdd_a(self):
         self.assertEqual(['acsd','fdseasdds','abc','d','adsaa','asd','poqwea','asdd','a'], list_letter('(acsd)(fdseasdds)(abc)d(adsaa)(asd)(poqwea)(asdd)a'))
+
+class TestTimesInWords(unittest.TestCase):
+
+    def test_do_caso_de_test_2_de_small_deve_retornar_certo(self):
+        word_test = 'nwlr(nqxb)bm(dgqw)bh'
+        words = 'nwlrbbmqbh\ncdarzowkky\nhiddqscdxr\njmowfrxsjy\nbldbefsarc\nbynecdyggx\nxpklorelln\nmpapqfwkho\npkmcoqhnwn\nkuewhsqmgb\nbuqcljjivs\nwmdkqtbxix\nmvtrrbljpt\nnsnfwzqfjm\nafadrrwsof\nsbcnuvqhff\nbsaqxwpqca\ncehchzvfrk\nmlnozjkpqp\nxrjxkitzyx\nacbhhkicqc\noendtomfgd\nwdwfcgpxiq\nvkuytdlcgd\newhtacioho\nrdtqkvwcsg'.split('\n')
+        self.assertEqual(1, times_in_words(words, word_test, list_letter(word_test), 10))
+
+    def test_de_caso_teste_deve_retornar_3(self):
+        word_test = '(ab)(etca)(de)(hd)'
+        words = 'aedh\nated\nbaeh\naaae'.split('\n')
+        self.assertEqual(3, times_in_words(words, word_test, list_letter(word_test), 4))
 
 unittest.main()
