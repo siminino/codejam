@@ -5,6 +5,7 @@ class TestCreateMatriz(unittest.TestCase):
 
     def test_1_1_should_return_1(self):
         self.assertEqual('1 1', len_matriz(1,1,'1'))
+        self.assertEqual([['1']], create_matriz(1,1,'1'))
 
     def test_3_3_should_return_3_3(self):
         self.assertEqual('3 3', len_matriz(3,3, '1 2 3\n4 5 6\n7 8 9'))
