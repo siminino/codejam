@@ -1,6 +1,6 @@
 from codigo import reverse_words
 
-n = int(raw_input())
+on = int(raw_input())
 result = ''
 
 for testcase in range(n):
